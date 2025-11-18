@@ -1,0 +1,55 @@
+{
+  "about": {
+    "name": "Vincent Vo",
+    "title": "Computer Science • Finance • Boston College",
+    "photo": "headshot.jpeg",
+    "phone": "(508)-614-5025",
+    "email": "vovin@bc.edu",
+    "resume": "placehold.png",
+    "linkedin": "https://www.linkedin.com/in/vincent-vo-021b172a4",
+    "github": "https://github.com/vvo15",
+    "bio": "Vincent Vo is a current undergraduate at Boston College as of 2025. He will be graduating with a degree in Computer Science with a minor in Finance in 2029. He is currently working on a passion project for options pricing. He is an aspiring software engineer and is looking for research opportunities, mentorships, and internships. He was announced as the Marianapolis Preparatory School Valedictorian of the Class of 2025."
+  },
+  "news": [
+    {
+      "date": "2025-06-15",
+      "text": "Enrollment at Boston College class of 2029."
+    },
+    {
+      "date": "2025-06-01",
+      "text": "Graduated as Valedictorian of Marianapolis Preparatory School."
+    },
+    {
+      "date": "2025-5-25",
+      "text": "Presented my Capstone project on e-waste recycling."
+    }
+  ],
+  "projects": [
+    {
+      "id": "quantify",
+      "title": "Quantify",
+      "cardImage": "quantify.png",
+      "cardAlt": "Spotify statistics project cover",
+      "shortDescription": "An open-sourced program that allows Spotify users to see which songs they have listened to the most over a span of time.",
+      "logo": "quantify.png",
+      "logoAlt": "Quantify logo",
+      "subtitle": "This is the entire program for a website that displays your Spotify listening statistics. Current features include: display user profile picture, user profile name, artist name, artist album, and top tracks for 4 weeks, 6 months, and the past year. Made in collaboration with jpaul.",
+      "detailImage": "image.png",
+      "detailImageAlt": "Early screenshot of Quantify in use",
+      "detailDescription": "Quantify is an open-sourced project that lets users run a program to see which songs, artists, and genres they play the most across different time ranges. The goal is to provide a free, editable alternative to subscription-based Spotify stats tools, so users can customize or learn from the code. This project was made in collaboration with my former teacher, one whom I now call my mentor, Jadorian Paul in order to gain experience in web application development. This project taught me how to effectively use APIs, GitBash, Node.Js, and GitHub. I was able to gain early experience in JavaScript, React, and CSS. This project was inspired by a problem and finding a solution to the problem: paid programs. As an avid music listener, I am also curious on my listening statistics, and after seeing most websites requiring a subscription for in-depth use, I decided to tackle on the problem to provide, others with the same problem, a solution."
+    },
+    {
+      "id": "ecolocate",
+      "title": "EcoLocate",
+      "cardImage": "ecolate.png",
+      "cardAlt": "EcoLocate project cover",
+      "shortDescription": "A program that educates users on the importance of responsible e-waste recycling whilst also locating their nearest e-waste recycling center.",
+      "logo": "ecolate.png",
+      "logoAlt": "EcoLocate logo",
+      "subtitle": "This project entails my fully developed web-based platform, and its processes, that educates users on sustainable e-waste management, providing them with their nearest local recycling program locations. This tool emphasizes accessibility and community-driven solutions by connecting the user to organizations in their area. The functions of the website are based on circular economy principles (Weforum.org 2019) and ethical disposal frameworks (Techbuyer US 2022) to ensure scalability. This website focuses on encouraging community engagement, data accuracy, and accessibility.",
+      "detailImage": "ecolocate2.png",
+      "detailImageAlt": "EcoLocate's logistics",
+      "detailDescription": "The frontend of the website, or the user interface and eyecandy, was programmed using React, a JavaScript library, and a combination of HTML and CSS for minimalist styling. JavaScript was used to enable the interactive abilities of the website, most notably used for triggering the user’s brower’s built-in Geolocation API in which the user’s coordinates were used to calculate the distance from the recycling centers. The backend was most notably built using Node.js and Express.js to manage the processes for server-side logic and API requests to be flowed to the frontend smoothly. The most important feature of the backend is integrating Google’s Places API into the code. This process entailed acquiring a Google API key through the Google Cloud Platform, setting up project credentials to be securely stored as environment variables in a separate file, or package, known as the dotenv for security. This web tool facilitates e-waste management through merging education, technology, and community action. By leveraging existing infrastructure like the EPA’s recycling guidelines (Oswer 2014) and circular economy models (Weforum.org 2019), the website offers a legitimate and accessible tool for reducing e-waste’s environmental footprint. Future applications could integrate AI-driven analytics to predict regional e-waste trends or partner with manufacturers to promote device refurbishment. Another future application can be a mobile app, not a website, in which users can utilize this technology on their smartphone app, not just a website. Ultimately, the project uses localized, tech solutions in driving systemic change. This is one tool that can be expanded upon for more widespread adoption."
+    }
+  ]
+}

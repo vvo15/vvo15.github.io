@@ -1,49 +1,86 @@
-export function renderNews(news) {
+import { escapeHTML } from "./utils.js";
+
+const INITIAL_NEWS_COUNT = 5;
+
+function newsItems(items) {
+  if (!items.length) {
+    return `<li class="empty-state">No updates match your search.</li>`;
+  }
+
+  return items
+    .map(
+      (item) => `
+        <li class="news-item">
+          <time datetime="${escapeHTML(item.datetime)}">${escapeHTML(item.date)}</time>
+          <p>${escapeHTML(item.text)}</p>
+        </li>
+      `
+    )
+    .join("");
+}
+
+export default function renderNews(news) {
   return `
-      <section id="news" class="section">
-        <div class="container">
-          <h2 class="news_heading">News</h2>
-          <div class="search">
-            <input type="search" name="news" placeholder="Search News..." />
+    <section id="news" class="section reveal" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Recent milestones</p>
+            <h2 id="news-title">News</h2>
           </div>
-          <ul id="news-about-me" class="my-news newslist">
-            ${news.map(renderNewsItem).join("")}
-          </ul>
+          <div class="search-field news-search">
+            <label for="news-search">Search updates</label>
+            <input id="news-search" type="search" placeholder="Search news" autocomplete="off" />
+          </div>
         </div>
-      </section>
-    `;
+        <p id="news-status" class="sr-only" role="status" aria-live="polite"></p>
+        <ol id="news-list" class="news-list">
+          ${newsItems(news.slice(0, INITIAL_NEWS_COUNT))}
+        </ol>
+        <button id="news-toggle" class="button secondary-button news-toggle" type="button" aria-expanded="false" ${news.length <= INITIAL_NEWS_COUNT ? "hidden" : ""}>
+          Show all updates
+        </button>
+      </div>
+    </section>
+  `;
 }
 
-export function renderNewsItem(item) {
-  return `
-      <li>
-        <span class="my_dates">${item.date}</span> ${item.text}
-      </li>
-    `;
-}
+export function initializeNews(news) {
+  const search = document.querySelector("#news-search");
+  const list = document.querySelector("#news-list");
+  const toggle = document.querySelector("#news-toggle");
+  const status = document.querySelector("#news-status");
 
-export function setupNewsSearch(allNews) {
-  const search = document.querySelector("#news .search");
-  const list = document.querySelector("#news .newslist");
-
-  if (!search || !list) {
+  if (!search || !list || !toggle || !status) {
     return;
   }
 
-  console.log(search);
+  let expanded = false;
+  let filteredNews = news;
 
-  search.addEventListener("input", (e) => {
-    console.log(e.currentTarget);
-    console.log(e.target);
-    console.log(e.target.value);
+  const updateNews = () => {
+    const visibleNews = expanded
+      ? filteredNews
+      : filteredNews.slice(0, INITIAL_NEWS_COUNT);
 
-    const value = e.target.value || "";
+    list.innerHTML = newsItems(visibleNews);
+    toggle.hidden = filteredNews.length <= INITIAL_NEWS_COUNT;
+    toggle.textContent = expanded ? "Show recent only" : "Show all updates";
+    toggle.setAttribute("aria-expanded", String(expanded));
+    status.textContent = `${visibleNews.length} of ${filteredNews.length} update${filteredNews.length === 1 ? "" : "s"} shown.`;
+  };
 
-    const filtered = allNews.filter((newsItem) => {
-      const combined = `${newsItem.date} ${newsItem.text}`;
-      return combined.toLowerCase().includes(value.toLowerCase());
-    });
+  search.addEventListener("input", () => {
+    const query = search.value.trim().toLowerCase();
+    filteredNews = news.filter((item) =>
+      `${item.date} ${item.text}`.toLowerCase().includes(query)
+    );
+    expanded = false;
+    updateNews();
+  });
 
-    list.innerHTML = filtered.map(renderNewsItem).join("");
+  toggle.addEventListener("click", () => {
+    expanded = !expanded;
+    updateNews();
   });
 }

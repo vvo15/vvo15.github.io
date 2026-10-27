@@ -1,55 +1,193 @@
 {
+  "site": {
+    "name": "Vincent Vo",
+    "description": "Portfolio of Vincent Vo, a Boston College Computer Science student and Machine Learning Undergraduate Research Fellow working at the intersection of software and finance.",
+    "url": "https://vvo15.github.io/personalWebsite/"
+  },
   "about": {
     "name": "Vincent Vo",
-    "title": "Computer Science • Finance • Boston College",
+    "title": "Computer Science & Finance · Boston College '29",
     "photo": "headshot.jpeg",
-    "phone": "(508)-614-5025",
+    "photoAlt": "Vincent Vo wearing a suit outdoors",
+    "photoWidth": 400,
+    "photoHeight": 400,
     "email": "vovin@bc.edu",
-    "resume": "placehold.png",
+    "resume": "resume.pdf",
     "linkedin": "https://www.linkedin.com/in/vincent-vo-021b172a4",
     "github": "https://github.com/vvo15",
-    "bio": "Vincent Vo is a current undergraduate at Boston College as of 2025. He will be graduating with a degree in Computer Science with a minor in Finance in 2029. He is currently working on a passion project for options pricing. He is an aspiring software engineer and is looking for research opportunities, mentorships, and internships. He was announced as the Marianapolis Preparatory School Valedictorian of the Class of 2025."
+    "bio": "I'm a sophomore at Boston College studying Computer Science with a minor in Finance. I'm a Machine Learning Undergraduate Research Fellow at the PyTorch Connectomics Lab, a Boston College–Harvard collaboration led by Prof. Donglai Wei, where I help build the training data behind deep-learning models that segment mitochondria in electron microscopy images of the brain, and manage the teams that proofread it. Next summer I'm joining Fidelity Investments as a Leap Software Engineer Intern. I'm especially interested in where software meets finance, fintech and quantitative finance in particular. I graduated as valedictorian of Marianapolis Preparatory School in 2025."
   },
-  "news": [
+  "experience": [
     {
-      "date": "2025-06-15",
-      "text": "Enrollment at Boston College class of 2029."
+      "company": "Fidelity Investments",
+      "role": "Leap Software Engineer Intern (incoming)",
+      "location": "Boston, MA",
+      "period": "Jun 2027 – Aug 2027",
+      "highlights": []
     },
     {
-      "date": "2025-06-01",
-      "text": "Graduated as Valedictorian of Marianapolis Preparatory School."
+      "company": "PyTorch Connectomics Lab (Boston College × Harvard)",
+      "role": "Machine Learning Undergraduate Research Fellow",
+      "location": "",
+      "period": "Jun 2026 – Present",
+      "highlights": [
+        "Annotate and proofread mitochondria in large-scale electron microscopy volumes of the developing mouse cerebellum, producing labeled training data for deep-learning segmentation models",
+        "Project manager for the proofreading pipeline on the collaboration with Harvard's Lichtman Lab: onboard annotators, run quality control, track progress and deadlines",
+        "Lead the proofreading team for the H01 dataset",
+        "Develop features for the lab's annotation web app, including a mitochondria skeleton-length measurement tool",
+        "Presented my research to the Boston College Computer Science Department (Aug 2026)"
+      ]
     },
     {
-      "date": "2025-5-25",
-      "text": "Presented my Capstone project on e-waste recycling."
+      "company": "Boston College Investment Club",
+      "role": "General Member",
+      "location": "",
+      "period": "Fall 2026 – Present",
+      "highlights": []
     }
   ],
   "projects": [
     {
+      "id": "maestrom",
+      "title": "Maestrom",
+      "shortDescription": "A honeypot that detects AI hacking agents and keeps them occupied in a controlled tarpit.",
+      "subtitle": "Built at Hackachusetts 2026, the Mass AI Coalition's statewide AI hackathon.",
+      "detailDescription": [
+        "Maestrom is a defensive honeypot built at Hackachusetts 2026, the Mass AI Coalition's statewide AI hackathon. It is designed to recognize AI-driven hacking agents and keep them occupied in a controlled tarpit rather than allowing them to reach real services.",
+        "I owned the gateway and detector—“the Brain”—for our four-person team. That layer evaluates incoming behavior, decides when traffic should be treated as an automated attack, and directs suspicious agents into the decoy environment."
+      ],
+      "role": "Gateway and detector (“the Brain”)",
+      "team": "Four-person Hackachusetts team",
+      "tags": ["AI Security", "Honeypots", "Detection"],
+      "repo": "",
+      "cardImage": "",
+      "cardAlt": "Maestrom project cover",
+      "cardImageWidth": 1600,
+      "cardImageHeight": 1000,
+      "detailImage": "",
+      "detailImageAlt": "Maestrom project cover",
+      "detailImageWidth": 1600,
+      "detailImageHeight": 900
+    },
+    {
+      "id": "butterfly-effect",
+      "title": "Butterfly Effect",
+      "shortDescription": "A two-layer GitHub visualization with a constellation “Sky” and a Spotify Wrapped-style “Ground.”",
+      "subtitle": "A team project built at FidHacks 2026, Fidelity's hackathon.",
+      "detailDescription": [
+        "Butterfly Effect reframes GitHub activity as a two-part visual story. The “Sky” turns repositories and contributions into a constellation-inspired visualization, while the “Ground” presents a personal summary in a familiar Spotify Wrapped-style format.",
+        "We built the project as a team at FidHacks 2026, Fidelity's hackathon, combining data visualization and narrative design to make a developer's work easier to explore and share."
+      ],
+      "role": "Team contributor",
+      "team": "FidHacks 2026 team",
+      "tags": ["GitHub", "Data Visualization", "Storytelling"],
+      "repo": "",
+      "cardImage": "",
+      "cardAlt": "Butterfly Effect project cover",
+      "cardImageWidth": 1600,
+      "cardImageHeight": 1000,
+      "detailImage": "",
+      "detailImageAlt": "Butterfly Effect project cover",
+      "detailImageWidth": 1600,
+      "detailImageHeight": 900
+    },
+    {
       "id": "quantify",
       "title": "Quantify",
+      "shortDescription": "An open-source app that lets Spotify users see which songs they have listened to most over different time ranges.",
+      "subtitle": "A full-stack Spotify listening-statistics app built with React, Express, and Spotify OAuth 2.0.",
+      "detailDescription": [
+        "Quantify is an open-source project that lets users see which songs, artists, and genres they play most across different time ranges. It displays a user's profile, top artists, albums, and tracks for the previous four weeks, six months, and year.",
+        "The goal is to provide a free, editable alternative to subscription-based Spotify statistics tools, allowing people to customize the experience or learn from the code. As an avid music listener curious about my own listening habits, I wanted to solve the problem of detailed statistics being locked behind paid subscriptions.",
+        "I built Quantify with my former teacher and mentor, Jadorian Paul. The project gave me early experience with APIs, Git, Node.js, GitHub, JavaScript, React, and CSS. It grew into a full-stack application using React, Express, and Spotify OAuth 2.0."
+      ],
+      "role": "Full-stack developer",
+      "team": "Built with Jadorian Paul",
+      "tags": ["React", "Express", "Spotify OAuth 2.0"],
+      "repo": "",
       "cardImage": "quantify.png",
-      "cardAlt": "Spotify statistics project cover",
-      "shortDescription": "An open-sourced program that allows Spotify users to see which songs they have listened to the most over a span of time.",
-      "logo": "quantify.png",
-      "logoAlt": "Quantify logo",
-      "subtitle": "This is the entire program for a website that displays your Spotify listening statistics. Current features include: display user profile picture, user profile name, artist name, artist album, and top tracks for 4 weeks, 6 months, and the past year. Made in collaboration with jpaul.",
+      "cardAlt": "Green circular audio-wave logo for Quantify",
+      "cardImageWidth": 311,
+      "cardImageHeight": 311,
       "detailImage": "image.png",
-      "detailImageAlt": "Early screenshot of Quantify in use",
-      "detailDescription": "Quantify is an open-sourced project that lets users run a program to see which songs, artists, and genres they play the most across different time ranges. The goal is to provide a free, editable alternative to subscription-based Spotify stats tools, so users can customize or learn from the code. This project was made in collaboration with my former teacher, one whom I now call my mentor, Jadorian Paul in order to gain experience in web application development. This project taught me how to effectively use APIs, GitBash, Node.Js, and GitHub. I was able to gain early experience in JavaScript, React, and CSS. This project was inspired by a problem and finding a solution to the problem: paid programs. As an avid music listener, I am also curious on my listening statistics, and after seeing most websites requiring a subscription for in-depth use, I decided to tackle on the problem to provide, others with the same problem, a solution."
+      "detailImageAlt": "Early Quantify interface showing a user's top Spotify tracks",
+      "detailImageWidth": 1070,
+      "detailImageHeight": 877
     },
     {
       "id": "ecolocate",
       "title": "EcoLocate",
+      "shortDescription": "A web app that teaches responsible e-waste recycling and locates the nearest e-waste recycling center.",
+      "subtitle": "An accessible, community-focused platform connecting people with local e-waste recycling programs.",
+      "detailDescription": [
+        "EcoLocate is a fully developed web platform that educates users about sustainable e-waste management and helps them find nearby recycling programs. The tool emphasizes accessibility and community-driven solutions by connecting users with organizations in their area. Its approach draws on circular-economy principles and ethical-disposal frameworks, with a focus on community engagement, data accuracy, and accessibility.",
+        "I built the interface with React, JavaScript, HTML, and CSS. The browser's Geolocation API supplies a user's coordinates so the app can calculate distances to recycling centers. The backend uses Node.js and Express to handle server-side logic and API requests, including integration with Google's Places API. Project credentials are kept in environment variables with dotenv.",
+        "EcoLocate combines education, technology, and community action while drawing on existing infrastructure such as EPA recycling guidance and circular-economy models. Future versions could use analytics to predict regional e-waste trends, partner with manufacturers to promote device refurbishment, or bring the experience to a mobile app. The project demonstrates how localized technology can support wider systemic change."
+      ],
+      "role": "Full-stack developer",
+      "team": "Independent capstone project",
+      "tags": ["React", "Express", "Google Places API"],
+      "repo": "",
       "cardImage": "ecolate.png",
-      "cardAlt": "EcoLocate project cover",
-      "shortDescription": "A program that educates users on the importance of responsible e-waste recycling whilst also locating their nearest e-waste recycling center.",
-      "logo": "ecolate.png",
-      "logoAlt": "EcoLocate logo",
-      "subtitle": "This project entails my fully developed web-based platform, and its processes, that educates users on sustainable e-waste management, providing them with their nearest local recycling program locations. This tool emphasizes accessibility and community-driven solutions by connecting the user to organizations in their area. The functions of the website are based on circular economy principles (Weforum.org 2019) and ethical disposal frameworks (Techbuyer US 2022) to ensure scalability. This website focuses on encouraging community engagement, data accuracy, and accessibility.",
+      "cardAlt": "Green EcoLocate logo with a leaf and location pin",
+      "cardImageWidth": 579,
+      "cardImageHeight": 579,
       "detailImage": "ecolocate2.png",
-      "detailImageAlt": "EcoLocate's logistics",
-      "detailDescription": "The frontend of the website, or the user interface and eyecandy, was programmed using React, a JavaScript library, and a combination of HTML and CSS for minimalist styling. JavaScript was used to enable the interactive abilities of the website, most notably used for triggering the user’s brower’s built-in Geolocation API in which the user’s coordinates were used to calculate the distance from the recycling centers. The backend was most notably built using Node.js and Express.js to manage the processes for server-side logic and API requests to be flowed to the frontend smoothly. The most important feature of the backend is integrating Google’s Places API into the code. This process entailed acquiring a Google API key through the Google Cloud Platform, setting up project credentials to be securely stored as environment variables in a separate file, or package, known as the dotenv for security. This web tool facilitates e-waste management through merging education, technology, and community action. By leveraging existing infrastructure like the EPA’s recycling guidelines (Oswer 2014) and circular economy models (Weforum.org 2019), the website offers a legitimate and accessible tool for reducing e-waste’s environmental footprint. Future applications could integrate AI-driven analytics to predict regional e-waste trends or partner with manufacturers to promote device refurbishment. Another future application can be a mobile app, not a website, in which users can utilize this technology on their smartphone app, not just a website. Ultimately, the project uses localized, tech solutions in driving systemic change. This is one tool that can be expanded upon for more widespread adoption."
+      "detailImageAlt": "EcoLocate workflow showing recycling education, geolocation, and local results",
+      "detailImageWidth": 2516,
+      "detailImageHeight": 1406
+    }
+  ],
+  "news": [
+    {
+      "date": "Oct 2026",
+      "datetime": "2026-10",
+      "text": "Competed in Hackachusetts, the Mass AI Coalition's statewide AI hackathon, on a team building Maestrom, a honeypot that detects and tarpits AI hacking agents."
+    },
+    {
+      "date": "Oct 2026",
+      "datetime": "2026-10",
+      "text": "Accepted an offer to join Fidelity Investments as a Leap Software Engineer Intern for summer 2027."
+    },
+    {
+      "date": "Fall 2026",
+      "datetime": "2026",
+      "text": "Joined the Boston College Investment Club."
+    },
+    {
+      "date": "Sep 2026",
+      "datetime": "2026-09",
+      "text": "Named project manager for the H01 mitochondria proofreading effort at the PyTorch Connectomics Lab."
+    },
+    {
+      "date": "Aug 2026",
+      "datetime": "2026-08",
+      "text": "Presented my research on generating high-quality training data for mitochondria segmentation to the BC Computer Science Department."
+    },
+    {
+      "date": "Jun 2026",
+      "datetime": "2026-06",
+      "text": "Began a Machine Learning Undergraduate Research Fellowship at the PyTorch Connectomics Lab."
+    },
+    {
+      "date": "2026",
+      "datetime": "2026",
+      "text": "Competed at FidHacks 2026, building Butterfly Effect."
+    },
+    {
+      "date": "Jun 2025",
+      "datetime": "2025-06",
+      "text": "Graduated as valedictorian of Marianapolis Preparatory School."
+    },
+    {
+      "date": "Jun 2025",
+      "datetime": "2025-06",
+      "text": "Enrolled at Boston College, Class of 2029."
+    },
+    {
+      "date": "May 2025",
+      "datetime": "2025-05",
+      "text": "Presented my capstone project on e-waste recycling (EcoLocate)."
     }
   ]
 }

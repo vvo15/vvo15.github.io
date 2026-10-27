@@ -3,44 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vincent Vo</title>
+    <meta
+      name="description"
+      content="Portfolio of Vincent Vo, a Boston College Computer Science student and Machine Learning Undergraduate Research Fellow working at the intersection of software and finance."
+    />
+    <meta name="theme-color" content="#f7f5f1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vincent Vo | Software, ML & Finance" />
+    <meta
+      property="og:description"
+      content="Portfolio of Vincent Vo, a Boston College Computer Science student working across software, machine learning, and finance."
+    />
+    <meta property="og:url" content="https://vvo15.github.io/personalWebsite/" />
+    <meta
+      property="og:image"
+      content="https://vvo15.github.io/personalWebsite/headshot.jpeg"
+    />
+    <meta property="og:image:alt" content="Portrait of Vincent Vo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vincent Vo | Software, ML & Finance" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Vincent Vo, a Boston College Computer Science student working across software, machine learning, and finance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://vvo15.github.io/personalWebsite/headshot.jpeg"
+    />
+    <title>Vincent Vo | Software, ML & Finance</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("portfolio-theme");
+        } catch (error) {
+          theme = null;
+        }
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="index.js"></script>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="nav" aria-label="profile-container">
-        <a class="profile" href="index.html">Home</a>
-        <button
-          class="nav-toggle"
-          aria-label="Open Menu"
-          aria-controls="menu"
-          aria-expanded="false"
-        >
-          <img src="menubutton.png" alt="" width="22" height="22" />
-        </button>
-
-        <ul id="menu" class="links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main></main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Vincent Vo</p>
-        <p class="links"><a href="mailto:vovin@bc.edu">Email</a></p>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header id="site-header" class="site-header"></header>
+    <main id="main-content" tabindex="-1"></main>
+    <footer id="site-footer" class="site-footer"></footer>
+    <noscript>
+      <div class="noscript-message">
+        This portfolio needs JavaScript to load its content from data.json.
       </div>
-    </footer>
+    </noscript>
   </body>
 </html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VV monogram">
+  <rect width="64" height="64" rx="14" fill="#f7f5f1"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#8A100B" stroke-width="3"/>
+  <text x="21" y="41" text-anchor="middle" fill="#8A100B" font-family="Georgia, serif" font-size="25" font-weight="700">V</text>
+  <text x="43" y="41" text-anchor="middle" fill="#8A100B" font-family="Georgia, serif" font-size="25" font-weight="700">V</text>
+  <path d="M14 49h36" stroke="#B29D6C" stroke-width="3" stroke-linecap="round"/>
+</svg>
